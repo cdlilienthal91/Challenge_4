@@ -1,19 +1,44 @@
-<!DOCTYPE html> 
-<html lang="en-US">
-    <head>
+// Declare Var
+// Event listener to move data to index.html and back
+// Event Listener to clear scores
+// Function to compare scores and store in array
+// Retreive highscores
+// Log out highscores
+var highScore = document.querySelector("#highScore");
+var clear = document.querySelector("#clear");
+var goHome = document.querySelector("#goHome");
+goHome.addEventListener("click", function () {
+    window.location.replace("./index.html");
+  });
+  clear.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload();
+  });
+//TA help to compare scores
+function compare(a, b) {
+        console.log("[A]:", a);
+        console.log("[B]:", b);
+    if (a.score > b.score) {
+      return -1;
+    }
+    if (a.score < b.score) {
+      return 1;
+    }
+    return 0;
+  }
+  var allScores = localStorage.getItem("allScores");
 
-        <meta charset="UFT-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-                <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-                <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-                    <link href="https://fonts.googleapis.com/css2?family=Sono&display=swap" rel="stylesheet"/>
-                    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300&family=Sono&display=swap" rel="stylesheet">
-        <title>JavaScript Quiz</title>
-    </head>
-    <body>
-    
-            </div>
-        </footer>
-    </body>
-</html>
+    allScores = JSON.parse(allScores);
+   
+    allScores.sort(compare);
+
+    console.log(allScores);
+  
+  if (allScores !== null) {
+    for (var i = 0; i < allScores.length; i++) {
+      var createLi = document.createElement("li");
+        createLi.textContent = allScores[i].initials + " - " + allScores[i].score;
+        highScore.appendChild(createLi);
+    }
+  }
+  
