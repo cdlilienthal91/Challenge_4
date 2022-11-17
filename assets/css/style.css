@@ -3,7 +3,224 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background-size: 100px 75px;
 
         background-color:rgb(5, 5, 111);
-        
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+}
+button {
+    border-radius: 10px;
+  }
+    #Submit {
+        background-color: silver;
+        padding: 15px 30px;
+        font-size: 20px;
+        color: white;
+        margin: 45px;
+  }
+    #startTime {
+        background-color: silver;
+        padding: 15px 30px;
+        font-size: 20px;
+        color: white;
+  }
+    #btn-container {
+        text-align: center;
+        padding-bottom: 15px;
+  }
+     #clear {
+        background-color: silver;
+        padding: 10px;
+        font-size: 25px;
+        color: white;
+  }
+     #goHome {
+        background-color: silver;
+        padding: 10px;
+        font-size: 25px;
+        color: white;
+  }
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px solid gold;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 50px;
+    margin-bottom: 0px;
+    width: 500px;
+    height: 500px;
+  }
+#currentTime {
+    float: right;
+  }
+a:visited {
+    color: grey;
+    text-decoration: none;
+  }
+a:hover {
+    color: black;
+    text-decoration: none;
+  }
+#questionsDiv {
+    margin: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+textarea {
+    width: 100%;
+    margin: 20px;
+  }
+input {
+    margin-bottom: 15px;
+    width: 15%;
+    border: 5px solid black;
+  }
+label {
+    margin-right: 10px;
+  }  
+#titleline {
+    margin-top: 0;
+    border-bottom: 1px solid darkblue;
+    box-shadow: 0 20px 20px -20px grey;
+    margin: -50px auto 10px;
+    margin-bottom: 15px;
+    border: 1px black;
+    max-width: 550px;
+    height: 50px;
+
+  }
+h1 {
+    text-align: center;
+    font-size: 65px;
+    padding: 10px 10px 20px 10px;
+    color: white;
+    background-color: darkblue;
+    font-family: 'Courier New', Courier, monospace;
+  }
+p {
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+  }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+  }
+::-webkit-scrollbar-thumb {
+    background: silver;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: silver;
+  }
+#highscore-container {
+    width: 100%;
+  }
+#highScore {
+    height: 280px;
+    overflow: hidden;
+    overflow-y: auto;
+    letter-spacing: 10px;
+  }
+li {
+    background-color: silver;
+    margin-top: 15px;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: whitesmoke;
+    border: solid 5px black;
+    text-align: left, center;
+}
+#createDiv {
+    margin-top: 20px;
+    border-top: 5px solid black;
+    text-align: center;
+    padding-top: 10px;
+  }
+#createP {
+    margin: 15px;
+    font-size: 20px;
+  }
+#createInput {
+    text-align: center;
+  }
+  
+.footer-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  footer {
+    padding: 10px 0;
+    font-size: 10px;
+    color: whitesmoke;
+    text-align: center;
+    background: silver;
+    border-top: 5px solid gold;
+    border-left: 5px solid gold;
+    border-right: 5px solid gold;
+    border-bottom: 5px solid gold;
+  }
+  footer h1 {
+    font-size: 25px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      3px 3px 0 #000;
+  }
+  footer a:link {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  footer a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: darkblue;
+    text-decoration: gold;
+    cursor: grab;
+  }
+@media screen and (max-width: 786px) {
+    body {
+      max-width: 786px;
+    }
+    a {
+      margin-left: 20%;
+    }
+  }
+@media screen and (max-width: 640px) {
+    body {
+      min-width: 360px;
+    }
+    #wrapper {
+      width: 350px;
+      margin: 10px;
+      margin-bottom: 0px;
+    }
+    footer h1 {
+        font-size: 20px;
+      }
+    
+      a {
+        margin-left: 0%;
+      }
+    
+      h1 {
+        font-size: 55px;
+      }
+    footer {
+      width: 370px;
+      margin: 10px;
+      margin-top: 0px;
+    }
+    .footer-container {
+      max-width: 330px;
+    }
+  
+   
+  }
+  
